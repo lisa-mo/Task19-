@@ -55,12 +55,12 @@ public class PricesTest{
         assertThat(price.putMessage(), either(containsString("promotions")).or(containsString("discounts")));
     }
 
-    @Test
-    public void fullPriceTest() {
-        String actualValue = price.fullPrice(65, "CAN",12);
-        String expectedValue = "65 CAN this is the price, and the current tax is 12%";
-        assertThat(actualValue, is(expectedValue));
-    }
+//    @Test
+//    public void fullPriceTest() {
+//        String actualValue = price.fullPrice(65, "CAN",12);
+//        String expectedValue = "65 CAN this is the price, and the current tax is 12%";
+//        assertThat(actualValue, is(expectedValue));
+//    }
 
     @Test(timeout = 300)
     public void fullPriceWordTest() {

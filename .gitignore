@@ -1,6 +1,114 @@
-# Default ignored files
-/shelf/
-.idea
 *.iml
 *.xml
+.idea
+*.pdf
 
+# Default ignored files
+/shelf/
+/workspace.xml
+
+#OS-level helper files(cache, folder preferences)
+Thumbs.db
+# path/to/anywhere/Thumbs.db
+.DS_Store
+# any/folder/DS_Store
+
+#Logs
+*.log
+# anywhere/my.log, NOT my.logs, my.log.tmp
+
+# Compiled files
+#*.class
+*.py[co]
+# same as *.pyc OR *.pyo, NOT *.pyco
+
+migrate-201[5-7]*
+# anywhere/migrate-2015, migrate-20170101.db, NOT migrate-2018...
+
+*.py?
+# anywhere/*.py<any char>, *.pyc OR *.pyo OR *.pyd, NOT *.py
+
+# slash at the end means a folder
+# ->build/
+# folder "build", NOT file "build"
+
+#Patterns above match anywhere in the project
+#build
+#scripts/build
+
+
+# PATH-AWARE MODE
+/build/
+#build, but NOT scripts/build
+
+# in slash mode match relative to .gitignore
+secret/key
+# secret/key, NOT docs/secret/key
+
+doc/*.html
+# doc/file.html, NOT somewhere/doc/file.html
+
+/*.txt
+# my.txt, NOT somewhere/my.txt
+
+var/www*/tmp
+# var/www/tmp
+# var/www-home/tmp
+# NOT var/www/info/tmp
+
+# ...or replaces a path segment
+users/*/private
+# users/john/private
+# users/alice/private
+# NOT
+# users/private
+# users/john/project/private
+# script/users/john/private
+
+
+#double wildcard ** replaces any number of path segments
+**/*.log
+# same as *.log
+
+**/app/cache
+# shop/app/cache
+# main/front/app/cache
+
+docs/**/*.html
+# docs/module/generated.html
+# docs/general/info/performance.html
+# NOT
+# subdir/docs/my.html
+
+# ** can only be used as **/...
+# or .../**/...
+# or .../**
+
+
+
+.*
+!.gitattributes
+!.gitignore
+
+# DOESN`T WORK
+# install/ignores directory, making its content unknown to git
+# so we can`t "unignore" anything inside it
+# /install/
+# !install/packages.xml
+
+# INSTEAD
+# ignore not /install/, but each item of its content
+# this way we can "unignore" it
+/install/*
+!install/packages.xml
+
+
+
+
+
+
+
+
+
+
+/src/git
